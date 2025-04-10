@@ -1,0 +1,106 @@
+
+@charset "UTF-8";
+
+/* Definindo variáveis */
+:root {
+    --cor-fundo: rgb(255, 255, 255);
+    --cor-texto: white;
+    --cor-header: black;
+    --cor-secao-imagem: rgba(169, 169, 169, 0.381);
+    --cor-secundaria: rgb(81, 81, 81);
+    --padding-top-header: 60px;
+    --padding-bottom-header: 60px;
+    --font-small-caps: small-caps;
+    --padding-top-secao: 10vh;
+    --padding-bottom-secao: 10vh;
+    --padding-left-secao: 50px;
+    --padding-footer: 20px;
+    --font-weight-bolder: bolder;
+}
+
+/* Controlando com variáveis */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100%;
+    background-color: var(--cor-fundo);
+}
+
+header {
+    background-color: var(--cor-header);
+    color: var(--cor-texto);
+    text-align: center;
+    font-size: 10%vw;
+}
+
+header > h1 {
+    padding-top: var(--padding-top-header);
+    font-variant: var(--font-small-caps);
+}
+
+header > p {
+    padding-bottom: var(--padding-bottom-header);
+}
+
+a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: var(--font-weight-bolder);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: var(--padding-top-secao);
+    padding-bottom: var(--padding-bottom-secao);
+    line-height: 2em;
+    padding-left: var(--padding-left-secao);
+    font-family: unset;
+    font-size: 2.5vw;
+}
+
+section.normal {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto);
+}
+section.imagem {
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.616) inset;
+    background-color: var(--cor-secao-imagem);
+    color: var(--cor-texto);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section.imagem > p {
+    display: inline-block;
+    padding: 5px;
+    background-color: var(--cor-secao-imagem);
+    text-shadow: 10px 10px 10px black;
+}
+
+
+section > p{
+    padding-bottom: 2.8em;
+}
+
+section#img01{
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center;
+}
+
+section#img02{
+    background-image: url(../imagens/background002.jpg);
+    background-position: right center;
+}
+
+footer {
+    background-color: var(--cor-header);
+    text-align: center;
+    color: var(--cor-texto);
+    padding: var(--padding-footer);
+}
